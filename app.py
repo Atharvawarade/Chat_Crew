@@ -10,6 +10,8 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import PromptTemplate
 from flask import Flask, request, jsonify, render_template
 from dotenv import load_dotenv
+from flask import Flask, request, jsonify, render_template
+from voice import get_voice_input  # Import the function from voice.py
 
 # Load environment variables
 load_dotenv()
@@ -100,6 +102,18 @@ def handle_query():
     response_text = query_vector_store(question)
     print(f"Response sent to webpage: {response_text}")
     return jsonify({"response": response_text})
+
+# Route to handle voice query submissions
+@app.route('/voice-input', methods=['POST'])
+def voice_input():
+    try:
+        recognized_text = get_voice_input()
+        if "Error" in recognized_text:
+            return jsonify({"success": False, "message": recognized_text})
+        return jsonify({"success": True, "text": recognized_text})
+    except Exception as e:
+        print(f"Error in voice input: {e}")
+        return jsonify({"success": False, "message": "Error processing voice input."})
 
 if __name__ == "__main__":
     # Ensure the vector store is created when starting the server

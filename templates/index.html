@@ -1,108 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Assistance Chatbot</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/static/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <!-- Chatbot Container -->
-    <div id="chatbot" class="chatbot-container">
-      <div class="chatbot-header">
-        <span class="chatbot-title">Student Assistance Chatbot</span>
-        <button
-          class="btn-close btn-close-white"
-          onclick="toggleChatbot()"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div id="chatBody" class="chatbot-body">
-        <div class="chat-message bot-message">
-          Hello! 👋<br />How can I assist you?
-        </div>
-      </div>
-      <div class="chatbot-footer">
-        <button class="icon-button ">
-            <img src="/static/images/microphone.png" alt="Edit" />
-        </button>
-        <button class="icon-button">
-            <img src="/static/images/attach-file.png" alt="Edit" />
-        </button>
-        </button>
-        <input
-          id="userMessage"
-          type="text"
-          class="form-control"
-          placeholder="Ask your query"
-        />
-        <button class="icon-button send-button" onclick="sendMessage()">
-            <i class="fa fa-send-o" style="font-size: 25px;color:rgb(255, 255, 255)"></i>
-        </button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Assistance Chatbot</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <!-- Chatbot Container -->
+  <div id="chatbot" class="chatbot-container">
+    <div class="chatbot-header">
+      <span class="chatbot-title">Student Assistance Chatbot</span>
+      <button class="btn-close btn-close-white" onclick="toggleChatbot()" aria-label="Close"></button>
+    </div>
+    <div id="chatBody" class="chatbot-body">
+      <div class="chat-message bot-message">
+        Hello! 👋<br />How can I assist you?
       </div>
     </div>
+    <div class="chatbot-footer">
+      <button class="icon-button" onclick="activateMicrophone()">
+        <img src="/static/images/microphone.png" alt="Mic" />
+      </button>
+      <button class="icon-button">
+        <img src="/static/images/attach-file.png" alt="Edit" />
+      </button>
+      </button>
+      <input id="userMessage" type="text" class="form-control" placeholder="Ask your query" />
+      <button class="icon-button send-button" onclick="sendMessage()">
+        <i class="fa fa-send-o" style="font-size: 25px;color:rgb(255, 255, 255)"></i>
+      </button>
+    </div>
+  </div>
 
-    <!-- Chatbot Toggle Button -->
-    <button class="chatbot-toggle" onclick="toggleChatbot()">
-      <img src="/static/images/Chatbot Icon.png" alt="Chatbot Toggle" />
-    </button>
+  <!-- Chatbot Toggle Button -->
+  <button class="chatbot-toggle" onclick="toggleChatbot()">
+    <img src="/static/images/Chatbot Icon.png" alt="Chatbot Toggle" />
+  </button>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="/static/script.js"></script> -->
-    <script>
-      function toggleChatbot() {
-          const chatbot = document.getElementById("chatbot");
-          chatbot.classList.toggle("active");
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="/static/script.js"></script> -->
+  <script>
+    function toggleChatbot() {
+      const chatbot = document.getElementById("chatbot");
+      chatbot.classList.toggle("active");
+    }
+
+    async function sendMessage() {
+      const userMessage = document.getElementById("userMessage").value.trim();
+      const chatBody = document.getElementById("chatBody");
+      if (userMessage === "") return;
+
+      // Append user message
+      chatBody.innerHTML += `<div class="chat-message user-message">${userMessage}</div>`;
+      document.getElementById("userMessage").value = "";
+      chatBody.scrollTop = chatBody.scrollHeight;
+
+      // Show a "thinking" indicator
+      chatBody.innerHTML += `<div class="chat-message bot-message thinking">Thinking...</div>`;
+      chatBody.scrollTop = chatBody.scrollHeight;
+
+      // Send message to server and fetch response
+      try {
+        const response = await fetch("/query", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question: userMessage }),
+        });
+        const data = await response.json();
+
+        // Remove "thinking" indicator and append bot response
+        document.querySelector(".thinking").remove();
+        chatBody.innerHTML += `<div class="chat-message bot-message">${data.response}</div>`;
+        chatBody.scrollTop = chatBody.scrollHeight;
+      } catch (error) {
+        document.querySelector(".thinking").remove();
+        chatBody.innerHTML += `<div class="chat-message bot-message">Error processing your request.</div>`;
+        chatBody.scrollTop = chatBody.scrollHeight;
       }
-  
-      async function sendMessage() {
-          const userMessage = document.getElementById("userMessage").value.trim();
-          const chatBody = document.getElementById("chatBody");
-          if (userMessage === "") return;
-  
-          // Append user message
-          chatBody.innerHTML += `<div class="chat-message user-message">${userMessage}</div>`;
-          document.getElementById("userMessage").value = "";
-          chatBody.scrollTop = chatBody.scrollHeight;
-  
-          // Show a "thinking" indicator
-          chatBody.innerHTML += `<div class="chat-message bot-message thinking">Thinking...</div>`;
-          chatBody.scrollTop = chatBody.scrollHeight;
-  
-          // Send message to server and fetch response
-          try {
-              const response = await fetch("/query", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify({ question: userMessage }),
-              });
-              const data = await response.json();
-  
-              // Remove "thinking" indicator and append bot response
-              document.querySelector(".thinking").remove();
-              chatBody.innerHTML += `<div class="chat-message bot-message">${data.response}</div>`;
-              chatBody.scrollTop = chatBody.scrollHeight;
-          } catch (error) {
-              document.querySelector(".thinking").remove();
-              chatBody.innerHTML += `<div class="chat-message bot-message">Error processing your request.</div>`;
-              chatBody.scrollTop = chatBody.scrollHeight;
-          }
+    }
+
+    // Trigger send button on Enter key press
+    document.getElementById("userMessage").addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault(); // Prevent default form submission
+        document.querySelector(".send-button").click(); // Trigger the send button
       }
-  
-      // Trigger send button on Enter key press
-      document.getElementById("userMessage").addEventListener("keypress", function (event) {
-          if (event.key === "Enter") {
-              event.preventDefault(); // Prevent default form submission
-              document.querySelector(".send-button").click(); // Trigger the send button
-          }
-      });
+    });
+
+    async function activateMicrophone() {
+      const chatBody = document.getElementById("chatBody");
+      const userMessageInput = document.getElementById("userMessage");
+
+      // Display a "Listening..." message
+      chatBody.innerHTML += `<div class="chat-message bot-message">Listening...</div>`;
+      chatBody.scrollTop = chatBody.scrollHeight;
+
+      try {
+        // Call the voice-input API
+        const response = await fetch("/voice-input", { method: "POST" });
+        const data = await response.json();
+
+        // Remove "Listening..." message
+        document.querySelector(".bot-message:last-child").remove();
+
+        if (data.success) {
+          // Populate the recognized text into the input box
+          userMessageInput.value = data.text;
+
+          // Automatically fire the query by simulating an Enter press
+          sendMessage(); // Call the sendMessage function directly
+        } else {
+          // Display the error message
+          chatBody.innerHTML += `<div class="chat-message bot-message">${data.message}</div>`;
+          chatBody.scrollTop = chatBody.scrollHeight;
+        }
+      } catch (error) {
+        console.error("Error activating microphone:", error);
+        document.querySelector(".bot-message:last-child").remove();
+        chatBody.innerHTML += `<div class="chat-message bot-message">Error activating microphone.</div>`;
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }
+    }
+
+
+
+
   </script>
-  
-    
-  </body>
+
+
+</body>
+
 </html>
