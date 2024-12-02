@@ -103,7 +103,6 @@ def handle_query():
     print(f"Response sent to webpage: {response_text}")
     return jsonify({"response": response_text})
 
-# Route to handle voice query submissions
 @app.route('/voice-input', methods=['POST'])
 def voice_input():
     try:
@@ -114,6 +113,8 @@ def voice_input():
     except Exception as e:
         print(f"Error in voice input: {e}")
         return jsonify({"success": False, "message": "Error processing voice input."})
+    
+
 
 if __name__ == "__main__":
     # Ensure the vector store is created when starting the server

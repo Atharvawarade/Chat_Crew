@@ -7,7 +7,8 @@
   <title>Student Assistance Chatbot</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/static/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 
 <body>
@@ -17,22 +18,57 @@
       <span class="chatbot-title">Student Assistance Chatbot</span>
       <button class="btn-close btn-close-white" onclick="toggleChatbot()" aria-label="Close"></button>
     </div>
-    <div id="chatBody" class="chatbot-body">
+
+    <!-- Initial Screen -->
+    <div id="initialScreen" class="initial-screen text-center">
+      <dotlottie-player src="https://lottie.host/6ae13108-19a6-46fe-8e3d-beb8c9b99fc4/zoP2jLUfSB.lottie"
+        class="lottie-animation" background="transparent" speed="1" style="width: 300px; height: 200px" loop
+        autoplay></dotlottie-player>
+      <p class="welcome-text">
+        Welcome!! I am your virtual assistant, here to help you navigate the
+        admission process and answer all your queries about engineering and
+        polytechnic institutes in Rajasthan.
+      </p>
+
+      <div class="mt-3">
+        <select id="languageSelector" class="form-select w-50 mx-auto">
+          <option value="en" selected>Select Language</option>
+          <option value="es">English</option>
+          <option value="fr">हिन्दी</option>
+          <option value="de">Rajasthani</option>
+        </select>
+      </div>
+
+      <br />
+      <button class="cta" onclick="startChat()">
+        <span>Start Chat</span>
+        <svg width="15px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </button>
+
+      <!-- <button class="btn btn-primary mt-3" onclick="startChat()">Start Chat</button> -->
+    </div>
+
+    <!-- Chatbot Body (Initially Hidden) -->
+    <div id="chatBody" class="chatbot-body d-none">
       <div class="chat-message bot-message">
         Hello! 👋<br />How can I assist you?
       </div>
     </div>
-    <div class="chatbot-footer">
+
+    <!-- Chatbot Footer (Initially Hidden) -->
+    <div id="chatFooter" class="chatbot-footer d-none">
       <button class="icon-button" onclick="activateMicrophone()">
         <img src="/static/images/microphone.png" alt="Mic" />
       </button>
       <button class="icon-button">
         <img src="/static/images/attach-file.png" alt="Edit" />
       </button>
-      </button>
       <input id="userMessage" type="text" class="form-control" placeholder="Ask your query" />
       <button class="icon-button send-button" onclick="sendMessage()">
-        <i class="fa fa-send-o" style="font-size: 25px;color:rgb(255, 255, 255)"></i>
+        <i class="fa fa-send-o" style="font-size: 25px; color: rgb(255, 255, 255)"></i>
       </button>
     </div>
   </div>
@@ -43,11 +79,19 @@
   </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- <script src="/static/script.js"></script> -->
   <script>
     function toggleChatbot() {
       const chatbot = document.getElementById("chatbot");
       chatbot.classList.toggle("active");
+    }
+
+    function startChat() {
+      // Hide the initial screen
+      document.getElementById("initialScreen").classList.add("d-none");
+
+      // Show the chatbot body and footer
+      document.getElementById("chatBody").classList.remove("d-none");
+      document.getElementById("chatFooter").classList.remove("d-none");
     }
 
     async function sendMessage() {
@@ -83,14 +127,6 @@
         chatBody.scrollTop = chatBody.scrollHeight;
       }
     }
-
-    // Trigger send button on Enter key press
-    document.getElementById("userMessage").addEventListener("keypress", function (event) {
-      if (event.key === "Enter") {
-        event.preventDefault(); // Prevent default form submission
-        document.querySelector(".send-button").click(); // Trigger the send button
-      }
-    });
 
     async function activateMicrophone() {
       const chatBody = document.getElementById("chatBody");
@@ -128,11 +164,54 @@
     }
 
 
+    async function sendQueryToChatbot(query, isHindiQuery) {
+      const chatBody = document.getElementById("chatBody");
 
+      // Append user message
+      chatBody.innerHTML += `<div class="chat-message user-message">${query}</div>`;
+      chatBody.scrollTop = chatBody.scrollHeight;
 
+      // Show a "thinking" indicator
+      chatBody.innerHTML += `<div class="chat-message bot-message thinking">Thinking...</div>`;
+      chatBody.scrollTop = chatBody.scrollHeight;
+
+      try {
+        // Send query to chatbot backend
+        const response = await fetch("/query", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question: query }),
+        });
+        const data = await response.json();
+
+        // Remove "thinking" indicator
+        document.querySelector(".thinking").remove();
+
+        let botResponse = data.response;
+        if (isHindiQuery) {
+          // Translate chatbot response to Hindi
+          const translationResponse = await fetch("/translate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ text: botResponse, targetLang: "hi" }),
+          });
+          const translationData = await translationResponse.json();
+          if (translationData.success) {
+            botResponse = translationData.translatedText;
+          }
+        }
+
+        // Append bot response
+        chatBody.innerHTML += `<div class="chat-message bot-message">${botResponse}</div>`;
+        chatBody.scrollTop = chatBody.scrollHeight;
+      } catch (error) {
+        console.error("Error processing chatbot query:", error);
+        document.querySelector(".thinking").remove();
+        chatBody.innerHTML += `<div class="chat-message bot-message">Error processing your request.</div>`;
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }
+    }
   </script>
-
-
 </body>
 
 </html>

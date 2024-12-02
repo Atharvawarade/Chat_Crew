@@ -1,10 +1,14 @@
-import os
-from dotenv import load_dotenv
+import joblib
 
-load_dotenv()
-api_key = os.getenv("GOOGLE_API_KEY")
+# Load the trained model (assuming 'question_classifier.pkl' is already trained and saved)
+pipeline = joblib.load('question_classifier.pkl')
 
-if api_key:
-    print(f"Google API Key retrieved: {api_key[:4]}...")  # Print only the first few characters for security
-else:
-    print("Google API Key not found.")
+def classify_question(question):
+    # Use the model to predict the category of the given question
+    category = pipeline.predict([question])[0]
+    return category
+
+# Example: You can call classify_question() with your question
+new_question = input("Enter your question: ")
+predicted_category = classify_question(new_question)
+print(f"The question is classified as: {predicted_category}")
