@@ -1,0 +1,96 @@
+{
+    "AdmissionData": {
+        "abc Admission Details": {
+            "fee": "1500",
+            "endDate": "2024-07-31",
+            "documents": "12th Marksheet, JEE Scorecard, ID Proof\t",
+            "timestamp": "2024-12-04T07:22:45.596000+00:00",
+            "contact": "admission@abc.edu / 123-456-7890",
+            "institutionName": "ABC Engineering College",
+            "coursesOffered": "B.Tech, M.Tech, MBA",
+            "eligibility": "60% in 12th Science with JEE Main",
+            "startDate": "2024-04-01",
+            "procedure": "Online Application > Entrance Test > Counseling",
+            "notes": "Scholarships for top 10% JEE rankers"
+        }
+    },
+    "AlumniData": {
+        "ABC Alumni Network Alumni Details": {
+            "alumniAssociationName": "ABC Alumni Network",
+            "eventsConducted": "Annual Meet, Tech Talks",
+            "jobOpportunities": "Offered through Alumni Portal",
+            "prominentAlumniAchievements": "CEO of TechCorp, AI Researcher at MIT",
+            "mentorshipPrograms": "Available for final-year students",
+            "alumniContactDatabase": "Available for internal use",
+            "contactQueries": "alumni@abc.edu / 123-456-7895",
+            "totalNumberOfAlumni": "10000",
+            "timestamp": "2024-12-04T07:37:53.284000+00:00",
+            "notes": "Dedicated online portal"
+        }
+    },
+    "CollegesData": {
+        "ABC Engineering College": {
+            "email": "abc@gmail.com",
+            "collegeName": "ABC Engineering College"
+        }
+    },
+    "CurriculumUpdates": {
+        "abc Curriculum Details": {
+            "effectiveFrom": "2024-08-01",
+            "syllabusUpdates": "Data Structures (updated with Python examples)",
+            "timestamp": "2024-12-04T07:25:12.626000+00:00",
+            "newCourses": "Artificial Intelligence, Blockchain",
+            "approvalAuthority": "Academic Council, ABC Engineering College",
+            "contact": "academics@abc.edu / 123-456-7891",
+            "courseObjectives": "Emphasis on practical AI applications",
+            "creditsChanges": "4 credits per course, GPA system (10-point)",
+            "departmentName": "Computer Science and Engineering",
+            "academicYear": "2024-2025",
+            "notes": "Internship mandatory for final year"
+        }
+    },
+    "FeeStructure": {
+        "abc Fee Details": {
+            "hostelFee": "60000",
+            "notes": "10% discount for early payment",
+            "programName": "B.Tech",
+            "paymentModes": "Online, Bank Transfer, DD",
+            "scholarshipOptions": "Merit-based, Sports quota",
+            "tuitionFee": "150000",
+            "labFees": "10000",
+            "lateFeePenalty": "NR 1000 per month",
+            "effectiveYear": "2024-2025",
+            "timestamp": "2024-12-04T07:26:48.413000+00:00",
+            "feeContact": "fees@abc.edu / 123-456-7892"
+        }
+    },
+    "InfrastructureData": {
+        "abc Infrastructure Details": {
+            "campusName": "Main Campus, Pune",
+            "sportsFacilities": "Cricket, Football, Basketball",
+            "hostelAccommodation": "500 students",
+            "libraryFacilities": "1,00,000 books, 200 journals",
+            "numberOfClassrooms": "80",
+            "contactQueries": "infra@abc.edu / 123-456-7894",
+            "medicalFacilities": "24x7 health center",
+            "laboratories": "20 labs (AI, IoT, Robotics)",
+            "timestamp": "2024-12-04T07:36:27.181000+00:00",
+            "totalArea": "100 acres",
+            "notes": "Renewable energy initiatives"
+        }
+    },
+    "ScholarshipData": {
+        "abc Scholarship Details": {
+            "scholarshipName": "Merit Scholarship",
+            "eligibilityCriteria": "Top 5% in JEE Main",
+            "scholarshipAmount": "Full tuition waiver",
+            "contactQueries": "scholarships@abc.edu / 123-456-7893",
+            "applicationStartDate": "2024-05-01",
+            "applicationProcedure": "Online form submission",
+            "applicationEndDate": "2025-04-01",
+            "timestamp": "2024-12-04T07:34:26.032000+00:00",
+            "documentsRequired": "JEE Scorecard, Income Certificate",
+            "notes": "Renewal based on 8.5 GPA"
+        }
+    }
+}
