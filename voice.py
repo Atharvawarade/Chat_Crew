@@ -30,7 +30,7 @@ def get_voice_input():
         return "Error: Listening timed out."
 
 # Example usage
-if __name__ == "__main__":
+if __name__ == '__main__':  # Corrected line
     query = get_voice_input()
     if "Error" not in query:
         print(f"Processing query: {query}")

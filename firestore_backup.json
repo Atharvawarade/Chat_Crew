@@ -1,96 +1,234 @@
 {
     "AdmissionData": {
+        "Admission Details abc": {
+            "fee": "100000 for OPEN\n52,756 for OBC\nNil for SC/ST",
+            "endDate": "2025-01-31",
+            "documents": "Aadhar Card, JEE Score Card, MHT CET Score Card, College transfer Certificate ",
+            "timestamp": "2025-01-08 08:05:37.489000+00:00",
+            "contact": "principal@bitwardha.ac.in",
+            "institutionName": "Bajaj Institute of Technology Wardha",
+            "coursesOffered": "Computer Engineering\nMechanical Engineering\nCivil Engineering\nElectrical Engineering",
+            "eligibility": "12th Passed or Diploma Holder",
+            "startDate": "2025-01-09",
+            "procedure": "See the Admission Portal",
+            "notes": "No"
+        },
+        "Admission Details info": {
+            "fee": "Approx. \u20b9700-\u20b91500, depending on the course and application process.\n",
+            "endDate": "2024-06-12",
+            "documents": "JEE Main scorecard (for B.Tech).\nMark sheets (10th & 12th).\nBachelor's degree certificates (for PG courses).\nTransfer and migration certificates.\nCaste and income certificates (if applicable).\nRecent passport-sized photographs.\n",
+            "timestamp": "2024-12-12 12:16:48.546000+00:00",
+            "contact": "info@gits.ac.in Phone: 0294-2657800 Website: www.gits.ac.in",
+            "institutionName": "Geetanjali Institute of Technical Studies, Udaipur",
+            "coursesOffered": "Undergraduate:\n1. B.Tech in Civil Engineering, Computer Science Engineering, Electrical Engineering, Electronics & Communication Engineering, Mechanical Engineering.\nPostgraduate:\n1. M.Tech in Computer Science Engineering, Digital Communication, Power Systems, Industrial Engineering & Management\n2. MBA\n3. MCA\n\n\n",
+            "eligibility": "For B.Tech:\n1. 10+2 with Physics, Mathematics, and Chemistry/Computer Science with 45% marks (General Category) or 40% (Reserved Category).\n2. Admission based on JEE Main scores and REAP counseling.\n\nFor M.Tech:\n1. Bachelor's degree in a relevant field with 55% marks (General Category).\n2. Admission through Centralized Admission for M.Tech (CAM).\n\nFor MBA/MCA:\n1. Bachelor's degree with 50% marks (General Category) or 45% (Reserved Category).\n2. Admission based on RMCAAP or state-level entrance.\n\n",
+            "startDate": "2024-05-12",
+            "procedure": "Register on REAP/RMCAAP/CAM portals (as applicable).\nFill in personal details and upload documents.\nPay the application fee.\nParticipate in the counseling process and seat allotment.\nConfirm admission and pay fees at the college.\n",
+            "notes": ""
+        },
         "abc Admission Details": {
-            "fee": "1500",
-            "endDate": "2024-07-31",
-            "documents": "12th Marksheet, JEE Scorecard, ID Proof\t",
-            "timestamp": "2024-12-04T07:22:45.596000+00:00",
-            "contact": "admission@abc.edu / 123-456-7890",
-            "institutionName": "ABC Engineering College",
-            "coursesOffered": "B.Tech, M.Tech, MBA",
-            "eligibility": "60% in 12th Science with JEE Main",
-            "startDate": "2024-04-01",
-            "procedure": "Online Application > Entrance Test > Counseling",
-            "notes": "Scholarships for top 10% JEE rankers"
+            "fileName": "jogh-11-03083 (1).pdf",
+            "timestamp": "2024-12-12 06:56:20.622000+00:00"
+        },
+        "abc Admission Form": {
+            "fee": "1000",
+            "endDate": "2025-01-01",
+            "coursesOffered": "B tech and Diploma",
+            "procedure": "REAP for First Year and LEEP for Diploma",
+            "contact": "principal.gecbharatpur@gmail.com",
+            "institutionName": "Government Engineering College Bharatpur, Rajasthan ",
+            "eligibility": "12th Pass",
+            "documents": "Aadhar Card and 12th Marksheet ",
+            "startDate": "2024-12-01",
+            "timestamp": "2024-12-12 08:55:22.503000+00:00",
+            "notes": ""
+        },
+        "gpc.udaipur Admission Details": {
+            "fee": "500",
+            "endDate": "2024-07-25",
+            "documents": "o\t10th-grade mark sheet\no\tAadhaar card\no\tCaste/income certificates (if applicable)\no\tRecent passport-sized photographs\n",
+            "timestamp": "2024-12-11 13:11:01.019000+00:00",
+            "contact": "Email: gpc.udaipur@rajasthan.gov.in Phone: +91-9461401694",
+            "institutionName": "Government Polytechnic College, Savina South Extension, Jogi Talab, Udaipur",
+            "coursesOffered": "Diploma in Civil Engineering\nDiploma in Electrical Engineering\nDiploma in Mechanical Engineering\n",
+            "eligibility": "10th pass with a minimum of 35% marks in Science and Mathematics.",
+            "startDate": "2024-06-13",
+            "procedure": "1.\tOnline application through the BTER portal.\n2.\tDocument verification at designated centers.\n3.\tMerit-based seat allotment.\n4.\tFee payment and confirmation of admission.\n",
+            "notes": "Reserved categories and girls enjoy subsidized fee structures"
         }
     },
     "AlumniData": {
         "ABC Alumni Network Alumni Details": {
-            "alumniAssociationName": "ABC Alumni Network",
+            "alumniAssociationName": "Not mentioned (add details if available).",
             "eventsConducted": "Annual Meet, Tech Talks",
             "jobOpportunities": "Offered through Alumni Portal",
-            "prominentAlumniAchievements": "CEO of TechCorp, AI Researcher at MIT",
+            "prominentAlumniAchievements": "Contributions in engineering, research, and public services.",
             "mentorshipPrograms": "Available for final-year students",
-            "alumniContactDatabase": "Available for internal use",
-            "contactQueries": "alumni@abc.edu / 123-456-7895",
+            "alumniContactDatabase": "Managed by the Training and Placement Office.",
+            "contactQueries": "Alumni actively support placements and internships.",
             "totalNumberOfAlumni": "10000",
-            "timestamp": "2024-12-04T07:37:53.284000+00:00",
+            "timestamp": "2024-12-04 07:37:53.284000+00:00",
             "notes": "Dedicated online portal"
+        },
+        "Engineering College Ajmer Alumni Network Alumni Details": {
+            "alumniAssociationName": "Engineering College Ajmer Alumni Network",
+            "eventsConducted": "Regular alumni meetups, webinars",
+            "jobOpportunities": "NA",
+            "prominentAlumniAchievements": "Alumni are active in IT, mechanical engineering, and public services, holding leadership positions.",
+            "mentorshipPrograms": "NA",
+            "alumniContactDatabase": "NA",
+            "contactQueries": "NA",
+            "totalNumberOfAlumni": "10000",
+            "timestamp": "2024-12-05 06:00:27.374000+00:00",
+            "notes": "NA"
+        },
+        "Not explicitly mentioned; likely coordinated by the institution. Alumni Details": {
+            "alumniAssociationName": "Not explicitly mentioned; likely coordinated by the institution.",
+            "eventsConducted": "Periodic alumni meetups and webinars.",
+            "jobOpportunities": "Facilitated through alumni in various industries.",
+            "prominentAlumniAchievements": "Alumni actively contribute in engineering sectors and government roles.",
+            "mentorshipPrograms": "Informal guidance provided during alumni interactions.",
+            "alumniContactDatabase": "Not publicly available.",
+            "contactQueries": "Email: gpc.udaipur@rajasthan.gov.in",
+            "totalNumberOfAlumni": "1000",
+            "timestamp": "2024-12-11 13:39:37.157000+00:00",
+            "notes": "Alumni network supports institutional growth"
         }
     },
     "CollegesData": {
         "ABC Engineering College": {
-            "email": "abc@gmail.com",
-            "collegeName": "ABC Engineering College"
+            "email": "principal.gecbharatpur@gmail.com",
+            "collegeName": "Government Engineering College Bharatpur , Rajasthan"
+        },
+        "BITS Pilani": {
+            "email": "bits.pilani@gmail.com",
+            "collegeName": "BITS Pilani"
+        },
+        "Bajaj Institute of Technology Wardha": {
+            "email": "principal@bitwardha.ac.in",
+            "collegeName": "Bajaj Institute of Technology Wardha"
+        },
+        "Geetanjali Institute of Technical Studies, Udaipur": {
+            "email": "info@gits.ac.in",
+            "collegeName": "Geetanjali Institute of Technical Studies, Udaipur"
+        },
+        "Government Engineering College, Ajmer": {
+            "email": "principal@ecajmer.ac.in",
+            "collegeName": "Government Engineering College, Ajmer"
+        },
+        "Government Polytechnic College, Savina South Extension, Jogi Talab, Udaipur": {
+            "email": "gpc.udaipur@rajasthan.gov.in",
+            "collegeName": "Government Polytechnic College, Savina South Extension, Jogi Talab, Udaipur"
         }
     },
     "CurriculumUpdates": {
         "abc Curriculum Details": {
-            "effectiveFrom": "2024-08-01",
-            "syllabusUpdates": "Data Structures (updated with Python examples)",
-            "timestamp": "2024-12-04T07:25:12.626000+00:00",
-            "newCourses": "Artificial Intelligence, Blockchain",
-            "approvalAuthority": "Academic Council, ABC Engineering College",
-            "contact": "academics@abc.edu / 123-456-7891",
-            "courseObjectives": "Emphasis on practical AI applications",
-            "creditsChanges": "4 credits per course, GPA system (10-point)",
-            "departmentName": "Computer Science and Engineering",
+            "timestamp": "2024-12-05 05:49:13.784000+00:00",
+            "departmentName": "All Engineering Programs (e.g., Civil, CSE, AI & DS).",
+            "syllabusUpdates": " Follows RTU Kota's curriculum, focusing on core engineering, data science, machine learning, IoT, and other emerging technologies.",
+            "approvalAuthority": "AICTE and affiliated with Rajasthan Technical University.",
+            "newCourses": "NA",
+            "contact": "Email: principal.gecbharatpur@gmail.com o\tPhone: 05644-234911",
+            "courseObjectives": "Equip students with technical and analytical skills. o\tPromote problem-solving and innovative thinking.",
+            "creditsChanges": "The grading follows university norms and aligns with the Choice-Based Credit System (CBCS).",
+            "effectiveFrom": "2024-06-26",
             "academicYear": "2024-2025",
-            "notes": "Internship mandatory for final year"
+            "notes": " The curriculum is updated regularly to incorporate emerging technologies"
+        },
+        "gpc.udaipur Curriculum Details": {
+            "effectiveFrom": "2024-04-25",
+            "syllabusUpdates": "As per the Board of Technical Education, Rajasthan (BTER) guidelines.",
+            "timestamp": "2024-12-11 13:14:09.692000+00:00",
+            "newCourses": "None mentioned.",
+            "approvalAuthority": "Board of Technical Education, Rajasthan.",
+            "contact": "Email: gpc.udaipur@rajasthan.gov.in",
+            "courseObjectives": "o\tDevelop technical skills for industry readiness.\no\tFoster problem-solving abilities in civil, mechanical, and electrical domains.\n",
+            "creditsChanges": "Standardized BTER grading system",
+            "departmentName": "Civil, Electrical, and Mechanical Engineering (Diploma programs)",
+            "academicYear": "2023-2024",
+            "notes": "The curriculum focuses on practical and theoretical knowledge1"
         }
     },
     "FeeStructure": {
         "abc Fee Details": {
-            "hostelFee": "60000",
-            "notes": "10% discount for early payment",
-            "programName": "B.Tech",
-            "paymentModes": "Online, Bank Transfer, DD",
-            "scholarshipOptions": "Merit-based, Sports quota",
-            "tuitionFee": "150000",
-            "labFees": "10000",
-            "lateFeePenalty": "NR 1000 per month",
+            "hostelFee": "3000",
+            "feeContact": "05644234911",
+            "programName": "B.Tech  Diploma",
+            "paymentModes": "Online banking or demand draft.",
+            "scholarshipOptions": "Scholarship Name:  o\tRajasthan Post-Metric Scholarship o\tChief Minister\u2019s Higher Education Scholarship o\tNational Scholarships (e.g., Merit-cum-Means) \u2022\tEligibility Criteria:  o\tBased on caste, income, or merit. o\tSC/ST/OBC/EWS students eligible under specific schemes. \u2022\tScholarship Amount/Benefits:  o\tTuition fee waivers or reimbursements. o\tMonthly allowances under specific programs. \u2022\tApplication Start Date: Typically August. \u2022\tApplication End Date: October. \u2022\tDocuments Required:  o\tAcademic and caste certificates. o\tIncome proof. o\tBank account details. \u2022\tApplication Procedure (Step-by-step):  o\tRegister on state/national scholarship portals. o\tUpload required documents. o\tSubmit the application and track approval status. \u2022\tContact for Queries (Email/Phone):  o\tEmail: principal.gecbharatpur@gmail.com o\tPhone: 05644-234911",
+            "tuitionFee": "90000",
+            "labFees": "0",
+            "lateFeePenalty": "Information available from the administrative office.",
             "effectiveYear": "2024-2025",
-            "timestamp": "2024-12-04T07:26:48.413000+00:00",
-            "feeContact": "fees@abc.edu / 123-456-7892"
+            "timestamp": "2024-12-05 05:52:04.792000+00:00",
+            "notes": "Fee structures are subject to changes based on updates from Rajasthan Technical University (RTU) or the state government"
+        },
+        "gpc.udaipur Fee Details": {
+            "hostelFee": "0",
+            "notes": "Scholarships cover a significant part of tuition for eligible candidates1.",
+            "programName": "Diploma in Civil, Electrical, and Mechanical Engineering.",
+            "paymentModes": "Online payments or bank challan.",
+            "scholarshipOptions": "EBC, AICTE Pragati, Saksham, and Swanath scholarships.",
+            "tuitionFee": "12500",
+            "labFees": "1000",
+            "lateFeePenalty": "As per institutional policies.",
+            "effectiveYear": "2023-2024.",
+            "timestamp": "2024-12-11 13:30:51.961000+00:00",
+            "feeContact": "Email: gpc.udaipur@rajasthan.gov.in"
         }
     },
     "InfrastructureData": {
         "abc Infrastructure Details": {
-            "campusName": "Main Campus, Pune",
-            "sportsFacilities": "Cricket, Football, Basketball",
-            "hostelAccommodation": "500 students",
-            "libraryFacilities": "1,00,000 books, 200 journals",
-            "numberOfClassrooms": "80",
-            "contactQueries": "infra@abc.edu / 123-456-7894",
-            "medicalFacilities": "24x7 health center",
-            "laboratories": "20 labs (AI, IoT, Robotics)",
-            "timestamp": "2024-12-04T07:36:27.181000+00:00",
-            "totalArea": "100 acres",
-            "notes": "Renewable energy initiatives"
+            "campusName": "Campus Name/Location: Village Shyorana, Near Sewar, NH-21, Bharatpur, Rajasthan.",
+            "sportsFacilities": " Cricket ground, football ground, basketball court.",
+            "hostelAccommodation": "Hostel Accommodation Details:  o\tSeparate boys' and girls' hostels with a capacity of 60 students each. o\tBasic amenities, Wi-Fi, and medical facilities available.",
+            "libraryFacilities": "Library Facilities (Books, Journals):  o\t30,453 books o\t37 journals/magazines, 1 e-journal",
+            "contactQueries": "Email: principal.gecbharatpur@gmail.com",
+            "numberOfClassrooms": "20+ lecture theaters, some with smart features.",
+            "medicalFacilities": "Medical Facilities: On-campus medical inspection room with qualified officers.",
+            "laboratories": "Laboratories (Details): State-of-the-art facilities for all engineering disciplines.",
+            "timestamp": "2024-12-05 05:57:52.358000+00:00",
+            "totalArea": " 41 acres",
+            "notes": "The campus is spacious with a focus on green spaces and accessibility"
+        },
+        "gpc.udaipur Infrastructure Details": {
+            "campusName": "Government Polytechnic College, Savina South Extension, Jogi Talab, Udaipur.",
+            "sportsFacilities": "Outdoor sports facilities\n",
+            "hostelAccommodation": "Not available",
+            "libraryFacilities": "2,800 books; 8 national/international journals.",
+            "numberOfClassrooms": "7",
+            "contactQueries": "Email: gpc.udaipur@rajasthan.gov.in",
+            "medicalFacilities": "Basic medical assistance available.",
+            "laboratories": "10 labs equipped for civil, mechanical, and electrical engineering.\nMechanical workshop includes welding and drilling machines\n",
+            "timestamp": "2024-12-11 13:36:57.057000+00:00",
+            "totalArea": "Not specified.",
+            "notes": "Campus includes a central examination facility and computer lab with internet access1."
         }
     },
     "ScholarshipData": {
         "abc Scholarship Details": {
-            "scholarshipName": "Merit Scholarship",
-            "eligibilityCriteria": "Top 5% in JEE Main",
-            "scholarshipAmount": "Full tuition waiver",
-            "contactQueries": "scholarships@abc.edu / 123-456-7893",
-            "applicationStartDate": "2024-05-01",
-            "applicationProcedure": "Online form submission",
-            "applicationEndDate": "2025-04-01",
-            "timestamp": "2024-12-04T07:34:26.032000+00:00",
-            "documentsRequired": "JEE Scorecard, Income Certificate",
-            "notes": "Renewal based on 8.5 GPA"
+            "scholarshipAmount": "o\tPMS: Full tuition fee reimbursement.\no\tChief Minister\u2019s Scholarship: Up to \u20b925,000/year.\no\tSumedha: Varies by need and merit.\n",
+            "eligibilityCriteria": "Based on caste, income, or merit. o\tSC/ST/OBC/EWS students eligible under specific schemes",
+            "scholarshipName": "Rajasthan Post-Metric Scholarship o\tChief Minister\u2019s Higher Education Scholarship o\tNational Scholarships (e.g., Merit-cum-Means)",
+            "contactQueries": "Email: principal.gecbharatpur@gmail.com o\tPhone: 05644-234911",
+            "applicationStartDate": "2024-08-26",
+            "applicationProcedure": "1.\tRegister on the Rajasthan government scholarship portal.\n2.\tUpload documents and submit the application.\n3.\tTrack the status on the portal.\n",
+            "applicationEndDate": "Typically August.",
+            "timestamp": "2024-12-05 05:55:24.525000+00:00",
+            "documentsRequired": "Academic and caste certificates. o\tIncome proof. o\tBank account details",
+            "notes": "Students must maintain academic performance to remain eligible"
+        },
+        "gpc.udaipur Scholarship Details": {
+            "scholarshipName": "o\tPragati, Saksham, and Swanath (AICTE)   \tSC/ST/OBC/EBC (State Government)",
+            "eligibilityCriteria": "Based on merit and category (income criteria for some).",
+            "scholarshipAmount": "Full/partial tuition coverage depending on the scheme.",
+            "contactQueries": "Email: gpc.udaipur@rajasthan.gov.in",
+            "applicationStartDate": "2024-07-11",
+            "applicationProcedure": "1.\tApply online via the respective portals (AICTE/State Government).\n2.\tUpload necessary documents.\n3.\tSubmit and track application status.\n",
+            "applicationEndDate": "2024-08-31",
+            "timestamp": "2024-12-11 13:34:19.192000+00:00",
+            "documentsRequired": "Category certificate\nIncome certificate\nAdmission proof\nBank account details\n",
+            "notes": "Students must maintain academic performance and attendance for continued eligibility1."
         }
     }
 }

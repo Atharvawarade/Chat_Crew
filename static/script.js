@@ -17,7 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
         chatBody.scrollTop = chatBody.scrollHeight;
 
         // Show a "thinking" indicator
-        chatBody.innerHTML += `<div class="chat-message bot-message thinking">Thinking...</div>`;
+        // Show a "thinking" animation instead of text
+        chatBody.innerHTML += `<div class="chat-message bot-message thinking">
+        <span class="loader"></span>
+        </div>`;
         chatBody.scrollTop = chatBody.scrollHeight;
 
         // Send message to server and fetch response
@@ -41,13 +44,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Attach Enter key event listener
-    document.getElementById("userMessage").addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault(); // Prevent default form submission
-            document.querySelector(".send-button").click(); // Trigger the send button
-        }
-    });
+    document
+        .getElementById("userMessage")
+        .addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); // Prevent default form submission
+                document.querySelector(".send-button").click(); // Trigger the send button
+            }
+        });
 
     // Attach toggleChatbot function to the toggle button
-    document.querySelector(".chatbot-toggle").addEventListener("click", toggleChatbot);
+    document
+        .querySelector(".chatbot-toggle")
+        .addEventListener("click", toggleChatbot);
 });
