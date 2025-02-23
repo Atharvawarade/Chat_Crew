@@ -3,7 +3,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Chatbot.css";
 import { processResponse } from "./utils";
-import YoutubeEmbed from "./YoutubeEmbed";
+
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
@@ -86,8 +86,7 @@ const Chatbot = () => {
 
   const renderMessageContent = (msg) => {
   // Regex to identify YouTube embed links
-  const youtubeRegex =
-    /^https:\/\/www\.youtube\.com\/embed\/[a-zA-Z0-9_-]+(\?[^ ]*)?$/;
+
 
   if (msg.type === "bot") {
     // If text is empty and there are image links, show only the images
