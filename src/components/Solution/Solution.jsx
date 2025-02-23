@@ -48,7 +48,7 @@ const Solution = () => {
                   View Live Demo
                 </a>
                 <a
-                  href="https://github.com/your-repo-admin"
+                  href="https://github.com/Atharvawarade/Chat_Crew_Admin.git"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="github-button"
@@ -92,7 +92,7 @@ const Solution = () => {
                   Live
                 </a>
                 <a
-                  href="https://github.com/your-repo-frontend"
+                  href="https://github.com/Atharvawarade/Chat_Crew.git"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="github-button"
@@ -101,7 +101,7 @@ const Solution = () => {
                   Frontend
                 </a>
                 <a
-                  href="https://github.com/your-repo-backend"
+                  href="https://github.com/Atharvawarade/Chat_Crew_Backend.git"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="github-button"
