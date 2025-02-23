@@ -6,7 +6,7 @@ const Solution = () => {
   return (
     <section className="solutions-section">
       <div className="solutions-container">
-        <div className="solutions-header">
+        <div className="solutions-header" data-aos="fade-up">
           <h2 className="section-title">Our Innovative Solution</h2>
           <p className="section-subtitle">
             Revolutionizing the way you interact with technology Lorem ipsum
@@ -17,9 +17,9 @@ const Solution = () => {
           </p>
         </div>
 
-        <div className="solution-cards">
+        <div className="solution-cards" >
           {/* Admin Panel Card */}
-          <div className="solution-card">
+          <div className="solution-card" data-aos="fade-right">
             <div className="card-content">
               <h3 className="card-title">Admin Panel</h3>
               <p className="card-description">
@@ -61,7 +61,7 @@ const Solution = () => {
           </div>
 
           {/* Chatbot Card */}
-          <div className="solution-card">
+          <div className="solution-card" data-aos="fade-left">
             <div className="card-content">
               <h3 className="card-title">Chatbot</h3>
               <p className="card-description">

@@ -10,6 +10,7 @@
     "@popperjs/core": "^2.11.8",
     "@react-three/drei": "^9.121.5",
     "@react-three/fiber": "^8.17.14",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "cra-template": "1.2.0",
     "lottie-react": "^2.4.1",

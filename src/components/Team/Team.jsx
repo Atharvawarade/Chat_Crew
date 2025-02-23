@@ -50,13 +50,13 @@ const Team = () => {
   return (
     <section className="team-section py-5">
       <div className="container">
-        <h2 className="section-title text-center mb-5">
+        <h2 className="section-title text-center mb-5" data-aos="fade-up">
           <span className="team-name">Meet Our Team</span>
           <br />
           <h3>Chat Crew</h3>
         </h2>
         
-        <div className="row g-5 justify-content-center">
+        <div className="row g-5 justify-content-center"  data-aos="fade-down">
           {teamMembers.map((member, index) => (
             <div key={index} className="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
               <div className="custom-card">

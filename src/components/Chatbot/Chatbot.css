@@ -371,6 +371,9 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-in-out;
 
+
+  
+
 }
 
 .suggestion-box i {
@@ -397,4 +400,57 @@
   margin: 5px 0;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Transition Animations */
+.animate-in {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading Screen */
+.loading-screen {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 350px;
+  height: 500px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.loading-text {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #4f46e5;
+  font-weight: 500;
+  text-align: center;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Smooth transitions for screens */
+.welcome-screen, .loading-screen, .chat-container {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -5,7 +5,7 @@ const Problem = () => {
   return (
     <section className="problem-section">
       <div className="problem-container">
-        <div className="problem-content">
+        <div className="problem-content" data-aos="fade-up">
           <h1 className="problem-title">Problem Statement</h1>
           <div className="problem-description">
           <h1 className="text-3xl font-bold mb-4">Background</h1>
@@ -47,7 +47,7 @@ const Problem = () => {
           </div>
         </div>
 
-        <div className="problem-image-container">
+        <div className="problem-image-container" data-aos="fade-left">
           <img 
             src="https://i0.wp.com/opportunitycell.com/wp-content/uploads/2022/03/SIH2.png?fit=327%2C345&ssl=1" 
             alt="Digital platform interface"

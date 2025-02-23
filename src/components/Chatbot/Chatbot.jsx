@@ -140,7 +140,7 @@ const Chatbot = () => {
   return (
     <div className="chatbot-wrapper">
       {!chatStarted ? (
-        <div className="welcome-screen">
+        <div className="welcome-screen animate-in">
           <Player
             autoplay
             loop
@@ -159,7 +159,7 @@ const Chatbot = () => {
           </div>
         </div>
       ) : (
-        <div className="chat-container">
+        <div className="chat-container animate-in">
           <div className="chat-header">
             <div className="header-content">
               <div className="bot-avatar">🎓</div>
@@ -175,10 +175,11 @@ const Chatbot = () => {
 
           {/* Suggestion Question Boxes */}
           {showSuggestions && (
-            <div className="suggestions-container">
+            <div className="suggestions-container" >
               <div className="row g-3 px-3">
                 <div className="col-md-6 col-12">
                   <div
+                    
                     className="suggestion-box p-1 "
                     onClick={() => sendMessage("Can I apply online?")}
                   >

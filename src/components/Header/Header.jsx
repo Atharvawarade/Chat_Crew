@@ -16,6 +16,20 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Function to handle smooth scrolling
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const offset = 70; // Adjust this based on your fixed navbar height
+      const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
       {/* Navbar */}
@@ -40,19 +54,19 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#home">Home</a>
+                <a className="nav-link" href="#hero" onClick={(e) => handleNavClick(e, "hero")}>Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#problem">Problem Statement</a>
+                <a className="nav-link" href="#problem" onClick={(e) => handleNavClick(e, "problem")}>Problem Statement</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#solution">Solution</a>
+                <a className="nav-link" href="#solution" onClick={(e) => handleNavClick(e, "solution")}>Solution</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#team">Team</a>
+                <a className="nav-link" href="#team" onClick={(e) => handleNavClick(e, "team")}>Team</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#glimpses">Glimpses</a>
+                <a className="nav-link" href="#glimpses" onClick={(e) => handleNavClick(e, "glimpses")}>Glimpses</a>
               </li>
             </ul>
           </div>

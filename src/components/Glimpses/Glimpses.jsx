@@ -20,7 +20,7 @@ const images = [
 
 const Glimpses = () => {
   return (
-    <div className="glimpses-container">
+    <div className="glimpses-container" data-aos="fade-up">
       <h2 className="section-title text-center mb-5">
           <span className="glimpses-heading">Glimpses</span>
           <br />
