@@ -1,16 +1,11 @@
-.chatbot-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
-  max-height: 400px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+
+body{
+  background: linear-gradient(to right top, #dcbfff, #c2e9fb, #ffdde1);
+
+  background-repeat: no-repeat;
+  
 }
+
 
 .chatbot-header {
   background: #007bff;
@@ -57,4 +52,64 @@
   color: white;
   border: none;
   border-radius: 5px;
+}
+
+
+/* Chatbot Toggle Button Styles */
+.chatbot-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.chatbot-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.chatbot-toggle.active {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+  transform: rotate(135deg);
+}
+
+.chatbot-toggle.active:hover {
+  transform: scale(1.1) rotate(145deg);
+}
+
+.chat-icon {
+  font-size: 28px;
+  transition: transform 0.3s ease;
+}
+
+/* Chatbot Positioning */
+.chat-wrapper {
+  position: fixed;
+  bottom: 180px;  /* Increased from 20px to 80px to move it higher */
+  right: 40px;  
+  z-index: 999;
+  transition: transform 0.3s ease;
+  animation: chatSlideIn 0.3s ease forwards;
+}
+
+@keyframes chatSlideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

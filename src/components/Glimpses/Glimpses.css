@@ -1,0 +1,95 @@
+.glimpses-container {
+  text-align: center;
+  padding: 20px;
+  max-width: 90vw;
+  margin: auto;
+}
+
+.glimpses-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.glimpses-slider {
+  padding: 10px;
+}
+
+/* Ensure all images have a fixed rectangular shape */
+.glimpse-image {
+  width: 100%; /* Ensures full width inside the Swiper container */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Prevents distortion while filling the space */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.glimpse-image:hover {
+  transform: scale(1.05);
+}
+
+/* Prevent overlapping */
+.glimpses-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .glimpse-image {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .glimpse-image {
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .glimpse-image {
+    height: 150px;
+  }
+}
+
+/* Navigation button styling */
+.swiper-button-prev,
+.swiper-button-next {
+  color: black; /* Arrow color */
+  background-color: white; /* White background */
+  width: 35px; /* Button size */
+  height: 35px; /* Make it a perfect circle */
+  border-radius: 50%; /* Circular shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: linear-gradient(45deg, #1e293b 30%, #6366f1); /* Change to blue on hover */
+  color: white; /* White arrow color on hover */
+}
+
+/* Positioning fixes */
+/* .swiper-button-prev {
+  left: -10px;
+}
+
+.swiper-button-next {
+  right: -10px;
+} */
+
+/* Remove default Swiper button backgrounds */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px;
+  font-weight: bold;
+}

@@ -1,0 +1,175 @@
+:root {
+  --primary: #6366f1;
+  --secondary: #14b8a6;
+  --glass: rgba(0, 0, 0, 0.05);
+  --background: #f8fafc;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+}
+
+.solutions-section {
+  padding: 1.5rem 2rem;
+  /* background: linear-gradient(45deg, var(--background), #e2e8f0); */
+  position: relative;
+  overflow: hidden;
+}
+
+.solutions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solutions-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  background: linear-gradient(45deg, #1e293b 30%, #6366f1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+
+  margin: 0 auto;
+}
+
+.solution-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.solution-card {
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid black;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.solution-card .card-content div {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.solution-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+  transform: rotate(45deg);
+  animation: shine 6s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: rotate(45deg) translateX(-150%);
+  }
+
+  100% {
+    transform: rotate(45deg) translateX(150%);
+  }
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.card-title {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-description {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.demo-button,
+.github-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+  border: none;
+  color: white;
+}
+
+.demo-button {
+  background: linear-gradient(45deg, var(--primary), #818cf8);
+}
+
+.github-button {
+  background: linear-gradient(45deg, #333, #000);
+}
+
+.button-icon {
+  font-size: 1.25rem;
+}
+
+.button-container a{
+  text-decoration: none;
+}
+
+
+/* Built With Section */
+/* Built With Section */
+.built-with-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 1rem;
+  /* text-align: center; */
+}
+
+.built-with-icons {
+  display: flex;
+  justify-content: left !important;
+  gap: 1rem;
+  margin: 0.5rem 0 2rem;
+}
+
+.built-with-icons i {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.built-with-icons i:hover {
+  transform: scale(1.2);
+}
+
+
+
+@media (max-width: 768px) {
+  .solutions-section {
+    padding: 4rem 1rem;
+  }
+
+  .solution-cards {
+    grid-template-columns: 1fr;
+  }
+}
