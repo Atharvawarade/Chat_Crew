@@ -103,6 +103,7 @@
 .card-description {
   color: var(--text-secondary);
   margin-bottom: 2rem;
+  text-align: justify;
 }
 
 .demo-button,

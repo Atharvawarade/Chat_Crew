@@ -9,11 +9,15 @@ const Solution = () => {
         <div className="solutions-header" data-aos="fade-up">
           <h2 className="section-title">Our Innovative Solution</h2>
           <p className="section-subtitle">
-            Revolutionizing the way you interact with technology Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Reprehenderit modi
-            iusto rerum quaerat quis excepturi facere nihil aut, iure
-            repudiandae repellat laboriosam voluptatem, accusantium dolores ipsa
-            perspiciatis! Fuga, consequuntur aliquam.
+            Introducing our AI-Powered Chatbot, a cutting-edge <strong>Retrieval Augmented Generation (RAG)
+            </strong> solution powered by <strong>Google Gemini’s API</strong>, delivering an impressive <strong>95% accuracy</strong> 
+            in contextually relevant responses! Designed with an engaging <strong>React.js UI</strong>, it offers seamless <strong>voice 
+              and image capabilities</strong>, earning a stellar <strong>4.8/5</strong> user satisfaction score. The system is divided 
+              into two parts: Admin Panel & Chatbot. The Admin Panel, used by the Department of Technical Education Rajasthan and college 
+              administrators, empowers them to monitor and manage Firebase, the knowledge hub for student queries. Meanwhile, the Chatbot, 
+              tailored for students and parents, ensures instant and accurate responses, simplifying admissions, scholarships, and placement 
+              inquiries. With an intuitive interface and real-time updates, our solution redefines student assistance, making information 
+              smarter, faster, and more accessible than ever!
           </p>
         </div>
 
@@ -23,8 +27,11 @@ const Solution = () => {
             <div className="card-content">
               <h3 className="card-title">Admin Panel</h3>
               <p className="card-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Explicabo maxime repellendus tenetur.
+              With the Admin Panel, the Department of Technical Education Rajasthan can effortlessly register new colleges, provide them 
+              with secure credentials, and monitor data uploads. College Admins can update their profiles and seamlessly manage 
+              essential information, including admission details, fee structures, scholarships, placements, curriculum, and infrastructure. 
+              They also have the flexibility to regularly update information, ensuring accuracy, reliability, and up-to-date insights for students
+               and parents.
               </p>
 
               {/* Built With Section */}
@@ -65,8 +72,10 @@ const Solution = () => {
             <div className="card-content">
               <h3 className="card-title">Chatbot</h3>
               <p className="card-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Explicabo maxime repellendus tenetur.
+                With our AI-powered Chatbot, students can ask any admission-related queries and receive accurate, easy-to-understand answers 
+                instantly! If a query lacks enough details, the chatbot intelligently asks follow-up questions to provide the most 
+                relevant response. It can even recommend colleges based on the provided data and showcase images of the institutions 
+                students are inquiring about, making the decision-making process smoother and more interactive!
               </p>
 
               {/* Built With Section */}
@@ -83,7 +92,7 @@ const Solution = () => {
 
               <div className="button-container">
                 <a
-                  href="https://your-chatbot-live-demo-link.com"
+                  href="https://student-assistance-chatbot-chatcrew.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="demo-button"
